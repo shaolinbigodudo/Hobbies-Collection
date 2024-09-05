@@ -11,8 +11,8 @@ def index():
         titulo = request.form.get('titulo')
         autor = request.form.get('autor')
 
-        response = requests.post(API_URL, json={'titulo': titulo, 'autor': autor})
-
+        response = requests.post(API_URL, json={'titulo':titulo, 'autor': autor})
+    
     response = requests.get(API_URL)
     if response.status_code == 200:
         livros = response.json()
